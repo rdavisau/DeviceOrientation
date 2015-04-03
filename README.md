@@ -1,17 +1,3 @@
-## Xamarin.Plugins for Xamarin and Windows Projects
+## Device Orientation Plugin for Xamarin
 
-## What is this?
-This is my main repo for all all Xamarin Plugins that I have or will be publishing. 
-
-# Current Plugins for Xamarin
-
-Each plugin has a README with more information on what they contain.
-* **[Device Orientation](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)**: Get device orientation or be notified of orientation changes through Xamarin.Forms MessagingCenter messages 
-
-#### Contributors
-* [aliozgur](https://github.com/aliozgur)
-
-Thanks!
-
-#### License
-Licensed under MIT see License file
+This *will be* a small fork of [aliozgur](https://github.com/aliozgur)'s device orientation plugin that replaces the dependency on Xamarin.Forms with Rx - suitable for non-forms projects.
