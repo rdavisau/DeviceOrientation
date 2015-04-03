@@ -1,15 +1,15 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.Abstractions", "DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\DeviceOrientation.Plugin.Abstractions.csproj", "{14C534B6-1984-41A9-A384-D3A5508588E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.Abstractions", "DeviceOrientation\DeviceOrientation.Plugin.Abstractions\DeviceOrientation.Plugin.Abstractions.csproj", "{14C534B6-1984-41A9-A384-D3A5508588E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.iOS", "DeviceOrientation\DeviceOrientation.Forms.Plugin.iOS\DeviceOrientation.Plugin.iOS.csproj", "{D525F236-6A2D-4010-B1CC-4A4B8581C90B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.iOS", "DeviceOrientation\DeviceOrientation.Plugin.iOS\DeviceOrientation.Plugin.iOS.csproj", "{D525F236-6A2D-4010-B1CC-4A4B8581C90B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.Android", "DeviceOrientation\DeviceOrientation.Forms.Plugin.Android\DeviceOrientation.Plugin.Android.csproj", "{AD2D2DB4-E781-4CF1-9B62-3AAD264F196D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.Android", "DeviceOrientation\DeviceOrientation.Plugin.Android\DeviceOrientation.Plugin.Android.csproj", "{AD2D2DB4-E781-4CF1-9B62-3AAD264F196D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.WindowsPhone", "DeviceOrientation\DeviceOrientation.Forms.Plugin.WindowsPhone\DeviceOrientation.Plugin.WindowsPhone.csproj", "{983B7EFF-7E75-4A87-890A-744A0B4C5232}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.WindowsPhone", "DeviceOrientation\DeviceOrientation.Plugin.WindowsPhone\DeviceOrientation.Plugin.WindowsPhone.csproj", "{983B7EFF-7E75-4A87-890A-744A0B4C5232}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B872DE4C-F284-45A2-9544-C7D6E0358789}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		DeviceOrientation.Plugin.nuspec = DeviceOrientation.Plugin.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.iOSUnified", "DeviceOrientation\DeviceOrientation.Forms.Plugin.iOSUnified\DeviceOrientation.Plugin.iOSUnified.csproj", "{3B4D87E0-77C1-413E-BCC8-85FCC317D60E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceOrientation.Plugin.iOSUnified", "DeviceOrientation\DeviceOrientation.Plugin.iOSUnified\DeviceOrientation.Plugin.iOSUnified.csproj", "{3B4D87E0-77C1-413E-BCC8-85FCC317D60E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
