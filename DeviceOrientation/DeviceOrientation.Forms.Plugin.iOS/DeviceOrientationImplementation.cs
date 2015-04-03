@@ -1,18 +1,18 @@
-﻿using DeviceOrientation.Forms.Plugin.Abstractions;
-using System;
-using Xamarin.Forms;
-using DeviceOrientation.Forms.Plugin.iOS;
+﻿using System;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using DeviceOrientation.Plugin.Abstractions;
+
 #if __UNIFIED__
 using UIKit;
 using Foundation;
 
 #else
-using MonoTouch.UIKit;
 using MonoTouch.Foundation;
+using MonoTouch.UIKit;
 #endif
 
-[assembly: Dependency(typeof(DeviceOrientationImplementation))]
-namespace DeviceOrientation.Forms.Plugin.iOS
+namespace DeviceOrientation.Plugin.iOS
 {
     /// <summary>
     /// DeviceOrientation Implementation
@@ -49,7 +49,7 @@ namespace DeviceOrientation.Forms.Plugin.iOS
                 {
                     Orientation = isPortrait ? DeviceOrientations.Portrait : DeviceOrientations.Landscape
                 };
-            MessagingCenter.Send<DeviceOrientationChangeMessage>(msg, DeviceOrientationChangeMessage.MessageId);
+            _orientationChanges.OnNext(msg);
         }
 
         #region IDeviceOrientation implementation
@@ -66,6 +66,13 @@ namespace DeviceOrientation.Forms.Plugin.iOS
 
             return isPortrait ? DeviceOrientations.Portrait: DeviceOrientations.Landscape;
         }
+
+        /// <summary>
+        /// An observable that fires a <code>DeviceOrientationChangeMessage</code> when the device orientation changes.
+        /// </summary>
+        public IObservable<DeviceOrientationChangeMessage> OrientationChanges { get { return _orientationChanges.AsObservable(); } }
+        private static readonly Subject<DeviceOrientationChangeMessage> _orientationChanges = new Subject<DeviceOrientationChangeMessage>(); 
+
 
         #endregion
     }

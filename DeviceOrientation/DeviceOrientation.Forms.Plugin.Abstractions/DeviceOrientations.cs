@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DeviceOrientation.Forms.Plugin.Abstractions
+﻿namespace DeviceOrientation.Plugin.Abstractions
 {
     /// <summary>
     /// Device orientations.

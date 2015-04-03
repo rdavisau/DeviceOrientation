@@ -1,13 +1,10 @@
-﻿using DeviceOrientation.Forms.Plugin.Abstractions;
-using System;
-using Xamarin.Forms;
-using DeviceOrientation.Forms.Plugin.WindowsPhone;
-using Windows.Devices.Sensors;
-using System.Windows;
+﻿using System;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using DeviceOrientation.Plugin.Abstractions;
 using Microsoft.Phone.Controls;
 
-[assembly: Dependency(typeof(DeviceOrientationImplementation))]
-namespace DeviceOrientation.Forms.Plugin.WindowsPhone
+namespace DeviceOrientation.Plugin.WindowsPhone
 {
     /// <summary>
     /// DeviceOrientation Implementation
@@ -32,7 +29,7 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
             {
                 Orientation = isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait
             };
-            MessagingCenter.Send<DeviceOrientationChangeMessage>(msg, DeviceOrientationChangeMessage.MessageId);
+            _orientationChanges.OnNext(msg);
         }
 
         /// <summary>
@@ -51,5 +48,12 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
            
            
         }
+
+        /// <summary>
+        /// An observable that fires a <code>DeviceOrientationChangeMessage</code> when the device orientation changes.
+        /// </summary>
+        public IObservable<DeviceOrientationChangeMessage> OrientationChanges { get { return _orientationChanges.AsObservable(); } }
+        private static readonly Subject<DeviceOrientationChangeMessage> _orientationChanges = new Subject<DeviceOrientationChangeMessage>(); 
+
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DeviceOrientation.Forms.Plugin.Abstractions
+﻿namespace DeviceOrientation.Plugin.Abstractions
 {
     /// <summary>
     /// Device orientation change message.
@@ -25,7 +23,7 @@ namespace DeviceOrientation.Forms.Plugin.Abstractions
         {
             get
             { 
-                return "DeviceOrientation.Forms.Plugin.OrientationChangeMessage";
+                return "DeviceOrientation.Plugin.OrientationChangeMessage";
             }
         }
     }
